@@ -1,0 +1,22 @@
+{
+  "name": "tfx",
+  "version": "0.0.1",
+  "description": "tf fe tools",
+  "main": "tfx.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tfx",
+    "fe"
+  ],
+  "repository": {
+    "type": "git",
+     "url": "https://github.com/woshiwanting/tfx"
+  },
+  "author": "stonevina",
+  "license": "ISC"
+}
