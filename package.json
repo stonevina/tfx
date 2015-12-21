@@ -15,8 +15,8 @@
   ],
   "repository": {
     "type": "git",
-     "url": "https://github.com/woshiwanting/tfx"
+     "url": "https://github.com/woshiwanting/tfx.git"
   },
   "author": "stonevina",
-  "license": "ISC"
+  "license": "MIT"
 }
