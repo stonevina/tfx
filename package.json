@@ -15,8 +15,15 @@
   ],
   "repository": {
     "type": "git",
-     "url": "https://github.com/woshiwanting/tfx.git"
+    "url": "https://github.com/woshiwanting/tfx.git"
   },
   "author": "stonevina",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "ftp": "^0.3.10"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "minimatch": "^3.0.3"
+  }
 }
