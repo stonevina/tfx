@@ -1,8 +1,11 @@
 {
   "name": "tfx",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "tf fe tools",
-  "main": "tfx.js",
+  "main": "index.js",
+  "bin": {
+    "tfx": "./index.js"
+  },
   "directories": {
     "test": "test"
   },
