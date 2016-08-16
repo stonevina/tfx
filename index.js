@@ -6,24 +6,26 @@ var program = require('commander');
 
 var upload = require('./lib/upload');
 var config = Object.create(require('./config'));
+var package_json = require('./package.json');
 
-program.version(config.version);
+program
+  .version(package_json.version)
+  .option('-v --version', 'output the version number');
 
 //上传操作
 program
   .command('upload <src>')
-  .alias('u')
   .description('upload static sources include js、css、img')
+  .alias('u')
   .action(function(src, opts) {
     upload(src, config.dest, config);
 });
 
-//未知命令提示
+//无效命令  
 program
   .command('*')
-  .description('tfx invalid command')
-  .action(function (cmd) {
-    console.log('%s is invalid, please enter tfx -h list command', cmd);
+  .action(function(cmd) {
+    console.log('  tfx: "%s" is invalid, please see other available commands ', cmd);
     program.outputHelp();
 });
 

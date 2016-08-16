@@ -1,7 +1,5 @@
 //配置文件
 module.exports = {
-  //tfx版本
-  version: '1.0.1',
   //本地目录
   src: '',
   //上传目录
