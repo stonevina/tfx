@@ -1,6 +1,6 @@
 {
   "name": "tfx",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "tf fe tools",
   "main": "index.js",
   "bin": {
