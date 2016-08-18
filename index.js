@@ -3,9 +3,12 @@
 'use strict';
 
 var program = require('commander');
+var path = require('path');
 
 var upload = require('./lib/upload');
-var config = Object.create(require('./config'));
+var init = require('./lib/init');
+var config = require('./lib/config');
+
 var package_json = require('./package.json');
 
 program
@@ -18,7 +21,18 @@ program
   .description('upload static sources include js、css、img')
   .alias('u')
   .action(function(src, opts) {
-    upload(src, config.dest, config);
+    config.getConfig().then(function(config) {
+      config = JSON.parse(config);
+      upload(src, config.dest, config);
+    });
+});
+
+program
+  .command('init')
+  .description('ftx init project, include config file and project boilerplate')
+  .alias('i')
+  .action(function(src, opts) {
+    init(path.join(__dirname, 'template'), path.join(process.cwd(), 'app'));
 });
 
 //无效命令  
